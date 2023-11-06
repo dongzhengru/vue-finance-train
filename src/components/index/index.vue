@@ -62,6 +62,7 @@ export default {
 #mySwiper{
   width: 1100px;
   height: 400px;
+  box-shadow: 0 0 5px;
   border-radius: 15px;
 }
 

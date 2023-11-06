@@ -11,12 +11,16 @@ export default new Router({
       name: 'index',
       component: Layout,
       redirect: '/index',
-      children: [{
-        path: 'index',
-        name: 'index',
-        component: () => import('../components/index/index'),
-        meta: { title: '主页', icon: 'el-icon-s-home' }
-      }]
+      children: [
+        {
+          path: 'index',
+          name: 'index',
+          component: () => import('../components/index/index')
+        },{
+          path: 'login',
+          name: 'login',
+          component: () => import('../components/user/login')
+        }]
     }
   ]
 })
