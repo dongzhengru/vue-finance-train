@@ -34,7 +34,7 @@
       <ul>
         <li>
           <el-card style="background-color: aliceblue;
-              border-radius: 10px;height: 270px;"  shadow="always">
+              border-radius: 10px;"  shadow="always">
             <div class="imgGet">
               <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
               <span>题目1111</span>
@@ -62,16 +62,16 @@
         </li>
         <li>
           <el-card style="background-color: aliceblue;
-              border-radius: 10px;height: 270px;"  shadow="always">
+              border-radius: 10px;"  shadow="always">
             <div class="imgGet">
               <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
               <span>题目1111</span>
             </div>
-              <div style="padding: 14px;">
-                <div class="introduction">
-                  简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
-                </div>
+            <div style="padding: 14px;">
+              <div class="introduction">
+                简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
               </div>
+            </div>
             <div class="other-container">
               <div style="font-size: 14px; color: rgb(255, 129, 9);">
                 ￥99.99
@@ -80,182 +80,176 @@
                 <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
               </div>
               <div>
-                  <el-rate
-                    v-model="value2"
-                    :colors="colors" disabled>
-                  </el-rate>
+                <el-rate
+                  v-model="value2"
+                  :colors="colors" disabled>
+                </el-rate>
               </div>
             </div>
           </el-card>
-        </li>
-        <li>
-          <el-card style="background-color: aliceblue;
-              border-radius: 10px;height: 270px;"  shadow="always">
-            <div class="imgGet">
-              <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
-              <span>题目1111</span>
+        </li><li>
+        <el-card style="background-color: aliceblue;
+              border-radius: 10px;"  shadow="always">
+          <div class="imgGet">
+            <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
+            <span>题目1111</span>
+          </div>
+          <div style="padding: 14px;">
+            <div class="introduction">
+              简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
             </div>
-              <div style="padding: 14px;">
-                <div class="introduction">
-                  简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
-                </div>
-              </div>
-            <div class="other-container">
-              <div style="font-size: 14px; color: rgb(255, 129, 9);">
-                ￥99.99
-              </div>
-              <div style="font-size: 14px; color: #888;width:50px">
-                <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
-              </div>
-              <div>
-                  <el-rate
-                    v-model="value2"
-                    :colors="colors" disabled>
-                  </el-rate>
-              </div>
+          </div>
+          <div class="other-container">
+            <div style="font-size: 14px; color: rgb(255, 129, 9);">
+              ￥99.99
             </div>
-          </el-card>
-        </li>
-        <li>
-          <el-card style="background-color: aliceblue;
-              border-radius: 10px;height: 270px;"  shadow="always">
-            <div class="imgGet">
-              <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
-              <span>题目1111</span>
+            <div style="font-size: 14px; color: #888;width:50px">
+              <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
             </div>
-              <div style="padding: 14px;">
-                <div class="introduction">
-                  简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
-                </div>
-              </div>
-            <div class="other-container">
-              <div style="font-size: 14px; color: rgb(255, 129, 9);">
-                ￥99.99
-              </div>
-              <div style="font-size: 14px; color: #888;width:50px">
-                <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
-              </div>
-              <div>
-                  <el-rate
-                    v-model="value2"
-                    :colors="colors" disabled>
-                  </el-rate>
-              </div>
+            <div>
+              <el-rate
+                v-model="value2"
+                :colors="colors" disabled>
+              </el-rate>
             </div>
-          </el-card>
-        </li>
-        <li>
-          <el-card style="background-color: aliceblue;
-              border-radius: 10px;height: 270px;"  shadow="always">
-            <div class="imgGet">
-              <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
-              <span>题目1111</span>
+          </div>
+        </el-card>
+      </li><li>
+        <el-card style="background-color: aliceblue;
+              border-radius: 10px;"  shadow="always">
+          <div class="imgGet">
+            <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
+            <span>题目1111</span>
+          </div>
+          <div style="padding: 14px;">
+            <div class="introduction">
+              简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
             </div>
-              <div style="padding: 14px;">
-                <div class="introduction">
-                  简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
-                </div>
-              </div>
-            <div class="other-container">
-              <div style="font-size: 14px; color: rgb(255, 129, 9);">
-                ￥99.99
-              </div>
-              <div style="font-size: 14px; color: #888;width:50px">
-                <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
-              </div>
-              <div>
-                  <el-rate
-                    v-model="value2"
-                    :colors="colors" disabled>
-                  </el-rate>
-              </div>
+          </div>
+          <div class="other-container">
+            <div style="font-size: 14px; color: rgb(255, 129, 9);">
+              ￥99.99
             </div>
-          </el-card>
-        </li>
-        <li>
-          <el-card style="background-color: aliceblue;
-              border-radius: 10px;height: 270px;"  shadow="always">
-            <div class="imgGet">
-              <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
-              <span>题目1111</span>
+            <div style="font-size: 14px; color: #888;width:50px">
+              <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
             </div>
-              <div style="padding: 14px;">
-                <div class="introduction">
-                  简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
-                </div>
-              </div>
-            <div class="other-container">
-              <div style="font-size: 14px; color: rgb(255, 129, 9);">
-                ￥99.99
-              </div>
-              <div style="font-size: 14px; color: #888;width:50px">
-                <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
-              </div>
-              <div>
-                  <el-rate
-                    v-model="value2"
-                    :colors="colors" disabled>
-                  </el-rate>
-              </div>
+            <div>
+              <el-rate
+                v-model="value2"
+                :colors="colors" disabled>
+              </el-rate>
             </div>
-          </el-card>
-        </li>
-        <li>
-          <el-card style="background-color: aliceblue;
-              border-radius: 10px;height: 270px;"  shadow="always">
-            <div class="imgGet">
-              <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
-              <span>题目1111</span>
+          </div>
+        </el-card>
+      </li><li>
+        <el-card style="background-color: aliceblue;
+              border-radius: 10px;"  shadow="always">
+          <div class="imgGet">
+            <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
+            <span>题目1111</span>
+          </div>
+          <div style="padding: 14px;">
+            <div class="introduction">
+              简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
             </div>
-              <div style="padding: 14px;">
-                <div class="introduction">
-                  简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
-                </div>
-              </div>
-            <div class="other-container">
-              <div style="font-size: 14px; color: rgb(255, 129, 9);">
-                ￥99.99
-              </div>
-              <div style="font-size: 14px; color: #888;width:50px">
-                <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
-              </div>
-              <div>
-                  <el-rate
-                    v-model="value2"
-                    :colors="colors" disabled>
-                  </el-rate>
-              </div>
+          </div>
+          <div class="other-container">
+            <div style="font-size: 14px; color: rgb(255, 129, 9);">
+              ￥99.99
             </div>
-          </el-card>
-        </li>
-        <li>
-          <el-card style="background-color: aliceblue;
-              border-radius: 10px;height: 270px;"  shadow="always">
-            <div class="imgGet">
-              <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
-              <span>题目1111</span>
+            <div style="font-size: 14px; color: #888;width:50px">
+              <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
             </div>
-              <div style="padding: 14px;">
-                <div class="introduction">
-                  简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
-                </div>
-              </div>
-            <div class="other-container">
-              <div style="font-size: 14px; color: rgb(255, 129, 9);">
-                ￥99.99
-              </div>
-              <div style="font-size: 14px; color: #888;width:50px">
-                <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
-              </div>
-              <div>
-                  <el-rate
-                    v-model="value2"
-                    :colors="colors" disabled>
-                  </el-rate>
-              </div>
+            <div>
+              <el-rate
+                v-model="value2"
+                :colors="colors" disabled>
+              </el-rate>
             </div>
-          </el-card>
-        </li>
+          </div>
+        </el-card>
+      </li><li>
+        <el-card style="background-color: aliceblue;
+              border-radius: 10px;"  shadow="always">
+          <div class="imgGet">
+            <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
+            <span>题目1111</span>
+          </div>
+          <div style="padding: 14px;">
+            <div class="introduction">
+              简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
+            </div>
+          </div>
+          <div class="other-container">
+            <div style="font-size: 14px; color: rgb(255, 129, 9);">
+              ￥99.99
+            </div>
+            <div style="font-size: 14px; color: #888;width:50px">
+              <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
+            </div>
+            <div>
+              <el-rate
+                v-model="value2"
+                :colors="colors" disabled>
+              </el-rate>
+            </div>
+          </div>
+        </el-card>
+      </li><li>
+        <el-card style="background-color: aliceblue;
+              border-radius: 10px;"  shadow="always">
+          <div class="imgGet">
+            <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
+            <span>题目1111</span>
+          </div>
+          <div style="padding: 14px;">
+            <div class="introduction">
+              简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
+            </div>
+          </div>
+          <div class="other-container">
+            <div style="font-size: 14px; color: rgb(255, 129, 9);">
+              ￥99.99
+            </div>
+            <div style="font-size: 14px; color: #888;width:50px">
+              <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
+            </div>
+            <div>
+              <el-rate
+                v-model="value2"
+                :colors="colors" disabled>
+              </el-rate>
+            </div>
+          </div>
+        </el-card>
+      </li><li>
+        <el-card style="background-color: aliceblue;
+              border-radius: 10px;"  shadow="always">
+          <div class="imgGet">
+            <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
+            <span>题目1111</span>
+          </div>
+          <div style="padding: 14px;">
+            <div class="introduction">
+              简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
+            </div>
+          </div>
+          <div class="other-container">
+            <div style="font-size: 14px; color: rgb(255, 129, 9);">
+              ￥99.99
+            </div>
+            <div style="font-size: 14px; color: #888;width:50px">
+              <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
+            </div>
+            <div>
+              <el-rate
+                v-model="value2"
+                :colors="colors" disabled>
+              </el-rate>
+            </div>
+          </div>
+        </el-card>
+      </li>
       </ul>
     </div>
 
@@ -265,16 +259,16 @@
       <ul>
         <li>
           <el-card style="background-color: aliceblue;
-              border-radius: 10px;height: 270px;"  shadow="always">
+              border-radius: 10px;"  shadow="always">
             <div class="imgGet">
               <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
               <span>题目1111</span>
             </div>
-              <div style="padding: 14px;">
-                <div class="introduction">
-                  简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
-                </div>
+            <div style="padding: 14px;">
+              <div class="introduction">
+                简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
               </div>
+            </div>
             <div class="other-container">
               <div style="font-size: 14px; color: rgb(255, 129, 9);">
                 ￥99.99
@@ -283,231 +277,221 @@
                 <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
               </div>
               <div>
-                  <el-rate
-                    v-model="value2"
-                    :colors="colors" disabled>
-                  </el-rate>
+                <el-rate
+                  v-model="value2"
+                  :colors="colors" disabled>
+                </el-rate>
               </div>
             </div>
           </el-card>
         </li>
         <li>
-          <el-card style="background-color: aliceblue;
-              border-radius: 10px;height: 270px;"  shadow="always">
-            <div class="imgGet">
-              <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
-              <span>题目1111</span>
+        <el-card style="background-color: aliceblue;
+              border-radius: 10px;"  shadow="always">
+          <div class="imgGet">
+            <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
+            <span>题目1111</span>
+          </div>
+          <div style="padding: 14px;">
+            <div class="introduction">
+              简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
             </div>
-              <div style="padding: 14px;">
-                <div class="introduction">
-                  简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
-                </div>
-              </div>
-            <div class="other-container">
-              <div style="font-size: 14px; color: rgb(255, 129, 9);">
-                ￥99.99
-              </div>
-              <div style="font-size: 14px; color: #888;width:50px">
-                <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
-              </div>
-              <div>
-                  <el-rate
-                    v-model="value2"
-                    :colors="colors" disabled>
-                  </el-rate>
-              </div>
+          </div>
+          <div class="other-container">
+            <div style="font-size: 14px; color: rgb(255, 129, 9);">
+              ￥99.99
             </div>
-          </el-card>
-        </li>
-        <li>
-          <el-card style="background-color: aliceblue;
-              border-radius: 10px;height: 270px;"  shadow="always">
-            <div class="imgGet">
-              <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
-              <span>题目1111</span>
+            <div style="font-size: 14px; color: #888;width:50px">
+              <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
             </div>
-              <div style="padding: 14px;">
-                <div class="introduction">
-                  简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
-                </div>
-              </div>
-            <div class="other-container">
-              <div style="font-size: 14px; color: rgb(255, 129, 9);">
-                ￥99.99
-              </div>
-              <div style="font-size: 14px; color: #888;width:50px">
-                <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
-              </div>
-              <div>
-                  <el-rate
-                    v-model="value2"
-                    :colors="colors" disabled>
-                  </el-rate>
-              </div>
+            <div>
+              <el-rate
+                v-model="value2"
+                :colors="colors" disabled>
+              </el-rate>
             </div>
-          </el-card>
-        </li>
-        <li>
-          <el-card style="background-color: aliceblue;
-              border-radius: 10px;height: 270px;"  shadow="always">
-            <div class="imgGet">
-              <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
-              <span>题目1111</span>
+          </div>
+        </el-card>
+      </li><li>
+        <el-card style="background-color: aliceblue;
+              border-radius: 10px;"  shadow="always">
+          <div class="imgGet">
+            <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
+            <span>题目1111</span>
+          </div>
+          <div style="padding: 14px;">
+            <div class="introduction">
+              简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
             </div>
-              <div style="padding: 14px;">
-                <div class="introduction">
-                  简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
-                </div>
-              </div>
-            <div class="other-container">
-              <div style="font-size: 14px; color: rgb(255, 129, 9);">
-                ￥99.99
-              </div>
-              <div style="font-size: 14px; color: #888;width:50px">
-                <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
-              </div>
-              <div>
-                  <el-rate
-                    v-model="value2"
-                    :colors="colors" disabled>
-                  </el-rate>
-              </div>
+          </div>
+          <div class="other-container">
+            <div style="font-size: 14px; color: rgb(255, 129, 9);">
+              ￥99.99
             </div>
-          </el-card>
-        </li>
-        <li>
-          <el-card style="background-color: aliceblue;
-              border-radius: 10px;height: 270px;"  shadow="always">
-            <div class="imgGet">
-              <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
-              <span>题目1111</span>
+            <div style="font-size: 14px; color: #888;width:50px">
+              <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
             </div>
-              <div style="padding: 14px;">
-                <div class="introduction">
-                  简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
-                </div>
-              </div>
-            <div class="other-container">
-              <div style="font-size: 14px; color: rgb(255, 129, 9);">
-                ￥99.99
-              </div>
-              <div style="font-size: 14px; color: #888;width:50px">
-                <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
-              </div>
-              <div>
-                  <el-rate
-                    v-model="value2"
-                    :colors="colors" disabled>
-                  </el-rate>
-              </div>
+            <div>
+              <el-rate
+                v-model="value2"
+                :colors="colors" disabled>
+              </el-rate>
             </div>
-          </el-card>
-        </li>
-        <li>
-          <el-card style="background-color: aliceblue;
-              border-radius: 10px;height: 270px;"  shadow="always">
-            <div class="imgGet">
-              <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
-              <span>题目1111</span>
+          </div>
+        </el-card>
+      </li><li>
+        <el-card style="background-color: aliceblue;
+              border-radius: 10px;"  shadow="always">
+          <div class="imgGet">
+            <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
+            <span>题目1111</span>
+          </div>
+          <div style="padding: 14px;">
+            <div class="introduction">
+              简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
             </div>
-              <div style="padding: 14px;">
-                <div class="introduction">
-                  简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
-                </div>
-              </div>
-            <div class="other-container">
-              <div style="font-size: 14px; color: rgb(255, 129, 9);">
-                ￥99.99
-              </div>
-              <div style="font-size: 14px; color: #888;width:50px">
-                <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
-              </div>
-              <div>
-                  <el-rate
-                    v-model="value2"
-                    :colors="colors" disabled>
-                  </el-rate>
-              </div>
+          </div>
+          <div class="other-container">
+            <div style="font-size: 14px; color: rgb(255, 129, 9);">
+              ￥99.99
             </div>
-          </el-card>
-        </li>
-        <li>
-          <el-card style="background-color: aliceblue;
-              border-radius: 10px;height: 270px;"  shadow="always">
-            <div class="imgGet">
-              <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
-              <span>题目1111</span>
+            <div style="font-size: 14px; color: #888;width:50px">
+              <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
             </div>
-              <div style="padding: 14px;">
-                <div class="introduction">
-                  简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
-                </div>
-              </div>
-            <div class="other-container">
-              <div style="font-size: 14px; color: rgb(255, 129, 9);">
-                ￥99.99
-              </div>
-              <div style="font-size: 14px; color: #888;width:50px">
-                <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
-              </div>
-              <div>
-                  <el-rate
-                    v-model="value2"
-                    :colors="colors" disabled>
-                  </el-rate>
-              </div>
+            <div>
+              <el-rate
+                v-model="value2"
+                :colors="colors" disabled>
+              </el-rate>
             </div>
-          </el-card>
-        </li>
-        <li>
-          <el-card style="background-color: aliceblue;
-              border-radius: 10px;height: 270px;"  shadow="always">
-            <div class="imgGet">
-              <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
-              <span>题目1111</span>
+          </div>
+        </el-card>
+      </li><li>
+        <el-card style="background-color: aliceblue;
+              border-radius: 10px;"  shadow="always">
+          <div class="imgGet">
+            <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
+            <span>题目1111</span>
+          </div>
+          <div style="padding: 14px;">
+            <div class="introduction">
+              简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
             </div>
-              <div style="padding: 14px;">
-                <div class="introduction">
-                  简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
-                </div>
-              </div>
-            <div class="other-container">
-              <div style="font-size: 14px; color: rgb(255, 129, 9);">
-                ￥99.99
-              </div>
-              <div style="font-size: 14px; color: #888;width:50px">
-                <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
-              </div>
-              <div>
-                  <el-rate
-                    v-model="value2"
-                    :colors="colors" disabled>
-                  </el-rate>
-              </div>
+          </div>
+          <div class="other-container">
+            <div style="font-size: 14px; color: rgb(255, 129, 9);">
+              ￥99.99
             </div>
-          </el-card>
-        </li>
+            <div style="font-size: 14px; color: #888;width:50px">
+              <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
+            </div>
+            <div>
+              <el-rate
+                v-model="value2"
+                :colors="colors" disabled>
+              </el-rate>
+            </div>
+          </div>
+        </el-card>
+      </li><li>
+        <el-card style="background-color: aliceblue;
+              border-radius: 10px;"  shadow="always">
+          <div class="imgGet">
+            <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
+            <span>题目1111</span>
+          </div>
+          <div style="padding: 14px;">
+            <div class="introduction">
+              简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
+            </div>
+          </div>
+          <div class="other-container">
+            <div style="font-size: 14px; color: rgb(255, 129, 9);">
+              ￥99.99
+            </div>
+            <div style="font-size: 14px; color: #888;width:50px">
+              <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
+            </div>
+            <div>
+              <el-rate
+                v-model="value2"
+                :colors="colors" disabled>
+              </el-rate>
+            </div>
+          </div>
+        </el-card>
+      </li><li>
+        <el-card style="background-color: aliceblue;
+              border-radius: 10px;"  shadow="always">
+          <div class="imgGet">
+            <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
+            <span>题目1111</span>
+          </div>
+          <div style="padding: 14px;">
+            <div class="introduction">
+              简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
+            </div>
+          </div>
+          <div class="other-container">
+            <div style="font-size: 14px; color: rgb(255, 129, 9);">
+              ￥99.99
+            </div>
+            <div style="font-size: 14px; color: #888;width:50px">
+              <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
+            </div>
+            <div>
+              <el-rate
+                v-model="value2"
+                :colors="colors" disabled>
+              </el-rate>
+            </div>
+          </div>
+        </el-card>
+      </li><li>
+        <el-card style="background-color: aliceblue;
+              border-radius: 10px;"  shadow="always">
+          <div class="imgGet">
+            <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
+            <span>题目1111</span>
+          </div>
+          <div style="padding: 14px;">
+            <div class="introduction">
+              简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
+            </div>
+          </div>
+          <div class="other-container">
+            <div style="font-size: 14px; color: rgb(255, 129, 9);">
+              ￥99.99
+            </div>
+            <div style="font-size: 14px; color: #888;width:50px">
+              <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
+            </div>
+            <div>
+              <el-rate
+                v-model="value2"
+                :colors="colors" disabled>
+              </el-rate>
+            </div>
+          </div>
+        </el-card>
+      </li>
       </ul>
     </div>
-
-
-
-
     <div class="choose"><center>分类3</center></div>
     <div class="recommend">
       <ul>
         <li>
           <el-card style="background-color: aliceblue;
-              border-radius: 10px;height: 270px;"  shadow="always">
+              border-radius: 10px;"  shadow="always">
             <div class="imgGet">
               <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
               <span>题目1111</span>
             </div>
-              <div style="padding: 14px;">
-                <div class="introduction">
-                  简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
-                </div>
+            <div style="padding: 14px;">
+              <div class="introduction">
+                简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
               </div>
+            </div>
             <div class="other-container">
               <div style="font-size: 14px; color: rgb(255, 129, 9);">
                 ￥99.99
@@ -516,210 +500,204 @@
                 <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
               </div>
               <div>
-                  <el-rate
-                    v-model="value2"
-                    :colors="colors" disabled>
-                  </el-rate>
+                <el-rate
+                  v-model="value2"
+                  :colors="colors" disabled>
+                </el-rate>
               </div>
             </div>
           </el-card>
         </li>
         <li>
-          <el-card style="background-color: aliceblue;
-              border-radius: 10px;height: 270px;"  shadow="always">
-            <div class="imgGet">
-              <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
-              <span>题目1111</span>
+        <el-card style="background-color: aliceblue;
+              border-radius: 10px;"  shadow="always">
+          <div class="imgGet">
+            <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
+            <span>题目1111</span>
+          </div>
+          <div style="padding: 14px;">
+            <div class="introduction">
+              简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
             </div>
-              <div style="padding: 14px;">
-                <div class="introduction">
-                  简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
-                </div>
-              </div>
-            <div class="other-container">
-              <div style="font-size: 14px; color: rgb(255, 129, 9);">
-                ￥99.99
-              </div>
-              <div style="font-size: 14px; color: #888;width:50px">
-                <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
-              </div>
-              <div>
-                  <el-rate
-                    v-model="value2"
-                    :colors="colors" disabled>
-                  </el-rate>
-              </div>
+          </div>
+          <div class="other-container">
+            <div style="font-size: 14px; color: rgb(255, 129, 9);">
+              ￥99.99
             </div>
-          </el-card>
-        </li>
-        <li>
-          <el-card style="background-color: aliceblue;
-              border-radius: 10px;height: 270px;"  shadow="always">
-            <div class="imgGet">
-              <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
-              <span>题目1111</span>
+            <div style="font-size: 14px; color: #888;width:50px">
+              <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
             </div>
-              <div style="padding: 14px;">
-                <div class="introduction">
-                  简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
-                </div>
-              </div>
-            <div class="other-container">
-              <div style="font-size: 14px; color: rgb(255, 129, 9);">
-                ￥99.99
-              </div>
-              <div style="font-size: 14px; color: #888;width:50px">
-                <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
-              </div>
-              <div>
-                  <el-rate
-                    v-model="value2"
-                    :colors="colors" disabled>
-                  </el-rate>
-              </div>
+            <div>
+              <el-rate
+                v-model="value2"
+                :colors="colors" disabled>
+              </el-rate>
             </div>
-          </el-card>
-        </li>
-        <li>
-          <el-card style="background-color: aliceblue;
-              border-radius: 10px;height: 270px;"  shadow="always">
-            <div class="imgGet">
-              <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
-              <span>题目1111</span>
+          </div>
+        </el-card>
+      </li><li>
+        <el-card style="background-color: aliceblue;
+              border-radius: 10px;"  shadow="always">
+          <div class="imgGet">
+            <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
+            <span>题目1111</span>
+          </div>
+          <div style="padding: 14px;">
+            <div class="introduction">
+              简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
             </div>
-              <div style="padding: 14px;">
-                <div class="introduction">
-                  简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
-                </div>
-              </div>
-            <div class="other-container">
-              <div style="font-size: 14px; color: rgb(255, 129, 9);">
-                ￥99.99
-              </div>
-              <div style="font-size: 14px; color: #888;width:50px">
-                <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
-              </div>
-              <div>
-                  <el-rate
-                    v-model="value2"
-                    :colors="colors" disabled>
-                  </el-rate>
-              </div>
+          </div>
+          <div class="other-container">
+            <div style="font-size: 14px; color: rgb(255, 129, 9);">
+              ￥99.99
             </div>
-          </el-card>
-        </li>
-        <li>
-          <el-card style="background-color: aliceblue;
-              border-radius: 10px;height: 270px;"  shadow="always">
-            <div class="imgGet">
-              <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
-              <span>题目1111</span>
+            <div style="font-size: 14px; color: #888;width:50px">
+              <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
             </div>
-              <div style="padding: 14px;">
-                <div class="introduction">
-                  简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
-                </div>
-              </div>
-            <div class="other-container">
-              <div style="font-size: 14px; color: rgb(255, 129, 9);">
-                ￥99.99
-              </div>
-              <div style="font-size: 14px; color: #888;width:50px">
-                <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
-              </div>
-              <div>
-                  <el-rate
-                    v-model="value2"
-                    :colors="colors" disabled>
-                  </el-rate>
-              </div>
+            <div>
+              <el-rate
+                v-model="value2"
+                :colors="colors" disabled>
+              </el-rate>
             </div>
-          </el-card>
-        </li>
-        <li>
-          <el-card style="background-color: aliceblue;
-              border-radius: 10px;height: 270px;"  shadow="always">
-            <div class="imgGet">
-              <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
-              <span>题目1111</span>
+          </div>
+        </el-card>
+      </li><li>
+        <el-card style="background-color: aliceblue;
+              border-radius: 10px;"  shadow="always">
+          <div class="imgGet">
+            <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
+            <span>题目1111</span>
+          </div>
+          <div style="padding: 14px;">
+            <div class="introduction">
+              简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
             </div>
-              <div style="padding: 14px;">
-                <div class="introduction">
-                  简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
-                </div>
-              </div>
-            <div class="other-container">
-              <div style="font-size: 14px; color: rgb(255, 129, 9);">
-                ￥99.99
-              </div>
-              <div style="font-size: 14px; color: #888;width:50px">
-                <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
-              </div>
-              <div>
-                  <el-rate
-                    v-model="value2"
-                    :colors="colors" disabled>
-                  </el-rate>
-              </div>
+          </div>
+          <div class="other-container">
+            <div style="font-size: 14px; color: rgb(255, 129, 9);">
+              ￥99.99
             </div>
-          </el-card>
-        </li>
-        <li>
-          <el-card style="background-color: aliceblue;
-              border-radius: 10px;height: 270px;"  shadow="always">
-            <div class="imgGet">
-              <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
-              <span>题目1111</span>
+            <div style="font-size: 14px; color: #888;width:50px">
+              <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
             </div>
-              <div style="padding: 14px;">
-                <div class="introduction">
-                  简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
-                </div>
-              </div>
-            <div class="other-container">
-              <div style="font-size: 14px; color: rgb(255, 129, 9);">
-                ￥99.99
-              </div>
-              <div style="font-size: 14px; color: #888;width:50px">
-                <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
-              </div>
-              <div>
-                  <el-rate
-                    v-model="value2"
-                    :colors="colors" disabled>
-                  </el-rate>
-              </div>
+            <div>
+              <el-rate
+                v-model="value2"
+                :colors="colors" disabled>
+              </el-rate>
             </div>
-          </el-card>
-        </li>
-        <li>
-          <el-card style="background-color: aliceblue;
-              border-radius: 10px;height: 270px;"  shadow="always">
-            <div class="imgGet">
-              <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
-              <span>题目1111</span>
+          </div>
+        </el-card>
+      </li><li>
+        <el-card style="background-color: aliceblue;
+              border-radius: 10px;"  shadow="always">
+          <div class="imgGet">
+            <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
+            <span>题目1111</span>
+          </div>
+          <div style="padding: 14px;">
+            <div class="introduction">
+              简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
             </div>
-              <div style="padding: 14px;">
-                <div class="introduction">
-                  简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
-                </div>
-              </div>
-            <div class="other-container">
-              <div style="font-size: 14px; color: rgb(255, 129, 9);">
-                ￥99.99
-              </div>
-              <div style="font-size: 14px; color: #888;width:50px">
-                <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
-              </div>
-              <div>
-                  <el-rate
-                    v-model="value2"
-                    :colors="colors" disabled>
-                  </el-rate>
-              </div>
+          </div>
+          <div class="other-container">
+            <div style="font-size: 14px; color: rgb(255, 129, 9);">
+              ￥99.99
             </div>
-          </el-card>
-        </li>
+            <div style="font-size: 14px; color: #888;width:50px">
+              <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
+            </div>
+            <div>
+              <el-rate
+                v-model="value2"
+                :colors="colors" disabled>
+              </el-rate>
+            </div>
+          </div>
+        </el-card>
+      </li><li>
+        <el-card style="background-color: aliceblue;
+              border-radius: 10px;"  shadow="always">
+          <div class="imgGet">
+            <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
+            <span>题目1111</span>
+          </div>
+          <div style="padding: 14px;">
+            <div class="introduction">
+              简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
+            </div>
+          </div>
+          <div class="other-container">
+            <div style="font-size: 14px; color: rgb(255, 129, 9);">
+              ￥99.99
+            </div>
+            <div style="font-size: 14px; color: #888;width:50px">
+              <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
+            </div>
+            <div>
+              <el-rate
+                v-model="value2"
+                :colors="colors" disabled>
+              </el-rate>
+            </div>
+          </div>
+        </el-card>
+      </li><li>
+        <el-card style="background-color: aliceblue;
+              border-radius: 10px;"  shadow="always">
+          <div class="imgGet">
+            <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
+            <span>题目1111</span>
+          </div>
+          <div style="padding: 14px;">
+            <div class="introduction">
+              简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
+            </div>
+          </div>
+          <div class="other-container">
+            <div style="font-size: 14px; color: rgb(255, 129, 9);">
+              ￥99.99
+            </div>
+            <div style="font-size: 14px; color: #888;width:50px">
+              <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
+            </div>
+            <div>
+              <el-rate
+                v-model="value2"
+                :colors="colors" disabled>
+              </el-rate>
+            </div>
+          </div>
+        </el-card>
+      </li><li>
+        <el-card style="background-color: aliceblue;
+              border-radius: 10px;"  shadow="always">
+          <div class="imgGet">
+            <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
+            <span>题目1111</span>
+          </div>
+          <div style="padding: 14px;">
+            <div class="introduction">
+              简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
+            </div>
+          </div>
+          <div class="other-container">
+            <div style="font-size: 14px; color: rgb(255, 129, 9);">
+              ￥99.99
+            </div>
+            <div style="font-size: 14px; color: #888;width:50px">
+              <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
+            </div>
+            <div>
+              <el-rate
+                v-model="value2"
+                :colors="colors" disabled>
+              </el-rate>
+            </div>
+          </div>
+        </el-card>
+      </li>
       </ul>
     </div>
 
