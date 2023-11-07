@@ -17,10 +17,10 @@
           <a href="#" style="margin-right: 25px;">登录/注册</a>
         </div>
       </el-header>
-      <el-main class="el-main" style="height: 560px">
+      <el-main class="el-main">
         <router-view/>
       </el-main>
-      <el-footer class="el-footer" style="height: 300px;background-color: #f9fafc;">
+      <el-footer class="el-footer" style="height: 300px;background-color: #f9fafc;margin-top: 100px">
         <div class="footer-content">
           <div class="footer-container">
             <div class="footer-section">
@@ -106,7 +106,7 @@ export default {
   .login-register a:hover {
     text-decoration: underline;
   }
-   
+
   .footer-content {
     margin: 0 auto;
     padding: 20px 0;
