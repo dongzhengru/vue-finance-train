@@ -20,6 +20,10 @@ export default new Router({
           path: 'login',
           name: 'login',
           component: () => import('../components/user/login')
+        },{
+          path: 'center',
+          name: 'center',
+          component: () => import('../components/user/center')
         }]
     }
   ]

@@ -11,128 +11,101 @@
       <div class="swiper-button-next" slot="button-next"></div>
     </swiper>
 
-
-    <div style="margin-top: 100px">
-      <div class="firstimg">
-        <img src="../../assets/用户.png"/>
-        <img src="../../assets/奖牌.png"/>
-        <img src="../../assets/书本.png"/>
-        <img src="../../assets/公文包.png"/>
+    <div style="margin-top: 40px;text-align: center;color: #888;font-size: 18px">独创一流的教育体系，步步提升自己</div>
+    <div style="margin-top: 20px">
+      <div class="firstImg">
+        <img src="../../assets/HomeIcon/lxzd.png"/>
+        <img src="../../assets/HomeIcon/sktx.png"/>
+        <img src="../../assets/HomeIcon/kcsj.png"/>
+        <img src="../../assets/HomeIcon/xxxd.png"/>
+        <img src="../../assets/HomeIcon/zysp.png"/>
+        <img src="../../assets/HomeIcon/hydw.png"/>
+        <img src="../../assets/HomeIcon/zyjs.png"/>
       </div>
-      <div class="firstimg">
-        <div class="word"><center>111</center></div>
-        <div class="word"><center>111</center></div>
-        <div class="word"><center>111</center></div>
-        <div class="word"><center>111</center></div>
+      <div class="firstImg">
+        <div class="word"><center>路线指导</center></div>
+        <div class="word"><center>上课提醒</center></div>
+        <div class="word"><center>课程升级</center></div>
+        <div class="word"><center>学习向导</center></div>
+        <div class="word"><center>专业视频</center></div>
+        <div class="word"><center>行业定位</center></div>
+        <div class="word"><center>专业讲师</center></div>
       </div>
-
     </div>
-
-
-    <div class="choose"><center>分类1</center></div>
+    <div class="choose"><center>财务方向</center></div>
     <div class="recommend">
       <ul>
         <li v-for="(number,index) in number" :key="number" >
-          <el-card style="background-color: aliceblue;
-              border-radius: 10px;"  shadow="always">
+          <el-card shadow="always">
             <div class="imgGet">
-              <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
-              <span>题目1111</span>
-            </div>
-              <div style="padding: 14px;">
-                <div class="introduction">
-                  简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
-                </div>
-              </div>
-            <div class="other-container">
-              <div style="font-size: 14px; color: rgb(255, 129, 9);">
-                ￥99.99
-              </div>
-              <div style="font-size: 14px; color: #888;width:50px">
-                <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
-              </div>
+              <img src="https://z1.ax1x.com/2023/11/05/piQshLV.jpg">
               <div>
-                  <el-rate
-                    v-model="value2"
-                    :colors="colors" disabled>
-                  </el-rate>
+                <span style="margin-top: 10px">测试课程{{number}}</span>
               </div>
-            </div>
-          </el-card>
-        </li>
-      </ul>
-    </div>
-
-
-    <div class="choose"><center>分类2</center></div>
-    <div class="recommend">
-      <ul>
-        <li v-for="(number,index) in number" :key="number" >
-          <el-card style="background-color: aliceblue;
-              border-radius: 10px;"  shadow="always">
-            <div class="imgGet">
-              <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
-              <span>题目1111</span>
             </div>
             <div style="padding: 14px;">
               <div class="introduction">
-                简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
+                关于测试课程{{number}}的一段简介，关于测试课程{{number}}的一段简介，关于测试课程{{number}}的一段简介
               </div>
             </div>
-            <div class="other-container">
-              <div style="font-size: 14px; color: rgb(255, 129, 9);">
-                ￥99.99
-              </div>
-              <div style="font-size: 14px; color: #888;width:50px">
-                <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
-              </div>
-              <div>
-                <el-rate
-                  v-model="value2"
-                  :colors="colors" disabled>
-                </el-rate>
-              </div>
+            <div class="other-container" style="display: grid; grid-template-columns: 1fr auto;">
+              <i class="el-icon-view">1248</i>
+              <el-rate v-model="value2" :colors="colors" disabled></el-rate>
             </div>
           </el-card>
         </li>
       </ul>
     </div>
 
-
-    <div class="choose"><center>分类3</center></div>
+    <div class="choose"><center>税务方向</center></div>
     <div class="recommend">
       <ul>
         <li v-for="(number,index) in number" :key="number" >
-          <el-card style="background-color: aliceblue;
-              border-radius: 10px;"  shadow="always">
+          <el-card shadow="always">
             <div class="imgGet">
-              <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png">
-              <span>题目1111</span>
+              <img src="https://z1.ax1x.com/2023/11/05/piQshLV.jpg">
+              <div>
+                <span style="margin-top: 10px">测试课程{{number}}</span>
+              </div>
             </div>
             <div style="padding: 14px;">
               <div class="introduction">
-                简介四五字简介四五字简介四五字简介四五字简介四五字简介四五字...
+                关于测试课程{{number}}的一段简介，关于测试课程{{number}}的一段简介，关于测试课程{{number}}的一段简介
               </div>
             </div>
-            <div class="other-container">
-              <div style="font-size: 14px; color: rgb(255, 129, 9);">
-                ￥99.99
-              </div>
-              <div style="font-size: 14px; color: #888;width:50px">
-                <img src="../../assets/查看次数.png" style="height: 12px;width: 12px;"/>3333
-              </div>
-              <div>
-                <el-rate
-                  v-model="value2"
-                  :colors="colors" disabled>
-                </el-rate>
-              </div>
+            <div class="other-container" style="display: grid; grid-template-columns: 1fr auto;">
+              <i class="el-icon-view">1248</i>
+              <el-rate v-model="value2" :colors="colors" disabled></el-rate>
             </div>
           </el-card>
         </li>
       </ul>
     </div>
 
+    <div class="choose"><center>财税方向</center></div>
+    <div class="recommend">
+      <ul>
+        <li v-for="(number,index) in number" :key="number" >
+          <el-card shadow="always">
+            <div class="imgGet">
+              <img src="https://z1.ax1x.com/2023/11/05/piQshLV.jpg">
+              <div>
+                <span style="margin-top: 10px">测试课程{{number}}</span>
+              </div>
+            </div>
+            <div style="padding: 14px;">
+              <div class="introduction">
+                关于测试课程{{number}}的一段简介，关于测试课程{{number}}的一段简介，关于测试课程{{number}}的一段简介
+              </div>
+            </div>
+            <div class="other-container" style="display: grid; grid-template-columns: 1fr auto;">
+              <i class="el-icon-view">1248</i>
+              <el-rate v-model="value2" :colors="colors" disabled></el-rate>
+            </div>
+          </el-card>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -198,8 +171,9 @@ export default {
   height: 400px;
 }
 .recommend{
-  width: 80%;
-  margin-left: 10%;
+  width: 1500px;
+  margin: 0 auto;
+  border-radius: 15px;
 }
 
 .recommend ul{
@@ -224,9 +198,10 @@ export default {
 }
 
 .recommend ul li img{
-  height: 130px;
-  width: 90%;
-  margin-left: 5%;
+  height: 100px;
+  width: 180px;
+  display: block;
+  margin: 0 auto;
   border-radius: 5px;
 }
 .recommend ul li .imgGet{
@@ -242,42 +217,38 @@ export default {
 }
 
 .recommend ul li .introduction{
-  font-size: 14px; /* 设置字体大小为14像素，你可以根据需要进行调整 */
-  color: #888; /* 使用灰色 (#888) 作为文字颜色，你可以选择不同的灰色值 */
-  font-style: italic;
+  font-size: 11px;
+  color: #888;
 }
 .choose{
-  background-color: #888888;
   width: 80%;
   margin-left: 10%;
   height: 40px;
-  font-size: 28px;
+  font-size: 20px;
+  font-weight: bold;
   line-height: 40px;
   margin-top: 40px;
   margin-bottom: 0;
 }
 
-.firstimg{
+.firstImg{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   width: 60%;
   margin-left: 20%;
 }
-.firstimg img{
-  width: 80px;
-  height: 80px;
+.firstImg img{
+  width: 60px;
+  height: 60px;
 }
 
-.firstimg .word{
+.firstImg .word{
   width: 80px;
   height: 20px;
-  font-size: 20px;
+  color: #888;
+  margin-top: 15px;
+  font-size: 17px;
   line-height: 20px;
-}
-
-.firstimg img:hover{
-  transform: scaleX(-1);
-  transition: all.6s;
 }
 </style>
