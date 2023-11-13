@@ -20,7 +20,7 @@
       <el-main class="el-main">
         <router-view/>
       </el-main>
-      <el-footer class="el-footer" style="height: 300px;background-color: #f9fafc;">
+      <el-footer class="el-footer" style="height: 300px;background-color: #f9fafc;margin-top: 100px">
         <div class="footer-content">
           <div class="footer-container">
             <div class="footer-section">
