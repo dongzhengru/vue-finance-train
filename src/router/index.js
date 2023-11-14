@@ -25,6 +25,22 @@ export default new Router({
           name: 'center',
           component: () => import('../components/user/center')
         }]
+    },{
+      path: '/course',
+      name: 'course',
+      component: Layout,
+      redirect: '/index',
+      children: [
+        // {
+        //   path: 'index',
+        //   name: 'index',
+        //   component: () => import('../components/course/index')
+        // },
+        {
+          path: 'play',
+          name: 'play',
+          component: () => import('../components/course/play')
+        }]
     }
   ]
 })
