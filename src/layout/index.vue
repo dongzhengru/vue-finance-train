@@ -8,8 +8,8 @@
         <div class="nav">
           <el-menu default-active="1" class="el-menu-demo" mode="horizontal" @select="handleSelect">
             <el-menu-item index="1">首页</el-menu-item>
-            <el-menu-item index="2">课程</el-menu-item>
-            <el-menu-item index="3">讲师</el-menu-item>
+            <el-menu-item index="2">课程中心</el-menu-item>
+            <el-menu-item index="3">互动广场</el-menu-item>
             <el-menu-item index="4">个人中心</el-menu-item>
           </el-menu>
         </div>
