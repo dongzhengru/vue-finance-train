@@ -20,7 +20,16 @@ export default new Router({
           path: 'login',
           name: 'login',
           component: () => import('../components/user/login')
-        }]
+        },{
+          path:'course',
+          name:'course',
+          component:()=>import("../components/course/course")
+        },{
+          path:'community',
+          name:'community',
+          component:()=>import("../components/community/index.vue")
+        }
+        ]
     }
   ]
 })
