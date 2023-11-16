@@ -19,7 +19,7 @@
         <img src="../../assets/HomeIcon/kcsj.png"/>
         <img src="../../assets/HomeIcon/xxxd.png"/>
         <img src="../../assets/HomeIcon/zysp.png"/>
-        <img src="../../assets/HomeIcon/hydw.png"/>
+        <img  src="../../assets/HomeIcon/hydw.png"/>
         <img src="../../assets/HomeIcon/zyjs.png"/>
       </div>
       <div class="firstImg">
@@ -31,76 +31,76 @@
         <div class="word"><center>行业定位</center></div>
         <div class="word"><center>专业讲师</center></div>
       </div>
-    </div>
-    <div class="choose"><center>财务方向</center></div>
+      </div>
+      <div class="choose"><center>税务管理与筹划</center></div>
     <div class="recommend">
       <ul>
-        <li v-for="(number,index) in number" :key="number" >
+        <li v-for="(course,index) in courseInfo.slice(0, 8)" :key="number" >
           <el-card shadow="always">
             <div class="imgGet">
-              <img src="https://z1.ax1x.com/2023/11/05/piQshLV.jpg">
+              <img :src="course.coverUrl">
               <div>
-                <span style="margin-top: 10px">测试课程{{number}}</span>
+                <span style="margin-top: 10px">{{course.title}}</span>
               </div>
             </div>
             <div style="padding: 14px;">
               <div class="introduction">
-                关于测试课程{{number}}的一段简介，关于测试课程{{number}}的一段简介，关于测试课程{{number}}的一段简介
+                {{course.intro}}
               </div>
             </div>
             <div class="other-container" style="display: grid; grid-template-columns: 1fr auto;">
-              <i class="el-icon-view">1248</i>
-              <el-rate v-model="value2" :colors="colors" disabled></el-rate>
+              <i class="el-icon-view">{{course.userNumber}}</i>
+              <el-rate v-model="course.level" :colors="colors" disabled></el-rate>
             </div>
           </el-card>
         </li>
       </ul>
     </div>
 
-    <div class="choose"><center>税务方向</center></div>
+    <div class="choose"><center>国际税务筹划与管理</center></div>
     <div class="recommend">
       <ul>
-        <li v-for="(number,index) in number" :key="number" >
+        <li v-for="(course,index) in courseInfo.slice(8, 16)" :key="number" >
           <el-card shadow="always">
             <div class="imgGet">
-              <img src="https://z1.ax1x.com/2023/11/05/piQshLV.jpg">
+              <img :src="course.coverUrl">
               <div>
-                <span style="margin-top: 10px">测试课程{{number}}</span>
+                <span style="margin-top: 10px">{{course.title}}</span>
               </div>
             </div>
             <div style="padding: 14px;">
               <div class="introduction">
-                关于测试课程{{number}}的一段简介，关于测试课程{{number}}的一段简介，关于测试课程{{number}}的一段简介
+                {{course.intro}}
               </div>
             </div>
             <div class="other-container" style="display: grid; grid-template-columns: 1fr auto;">
-              <i class="el-icon-view">1248</i>
-              <el-rate v-model="value2" :colors="colors" disabled></el-rate>
+              <i class="el-icon-view">{{course.userNumber}}</i>
+              <el-rate v-model="course.level" :colors="colors" disabled></el-rate>
             </div>
           </el-card>
         </li>
       </ul>
     </div>
 
-    <div class="choose"><center>财税方向</center></div>
+    <div class="choose"><center>资本运作中的税务筹划</center></div>
     <div class="recommend">
       <ul>
-        <li v-for="(number,index) in number" :key="number" >
+        <li v-for="(course,index) in courseInfo.slice(16, 32)" :key="number" >
           <el-card shadow="always">
             <div class="imgGet">
-              <img src="https://z1.ax1x.com/2023/11/05/piQshLV.jpg">
+              <img :src="course.coverUrl">
               <div>
-                <span style="margin-top: 10px">测试课程{{number}}</span>
+                <span style="margin-top: 10px">{{course.title}}</span>
               </div>
             </div>
             <div style="padding: 14px;">
               <div class="introduction">
-                关于测试课程{{number}}的一段简介，关于测试课程{{number}}的一段简介，关于测试课程{{number}}的一段简介
+                {{course.intro}}
               </div>
             </div>
             <div class="other-container" style="display: grid; grid-template-columns: 1fr auto;">
-              <i class="el-icon-view">1248</i>
-              <el-rate v-model="value2" :colors="colors" disabled></el-rate>
+              <i class="el-icon-view">{{course.userNumber}}</i>
+              <el-rate v-model="course.level" :colors="colors" disabled></el-rate>
             </div>
           </el-card>
         </li>
@@ -110,6 +110,9 @@
 </template>
 
 <script>
+
+import axios from "axios";
+
 export default {
   data() {
     return {
@@ -145,6 +148,7 @@ export default {
         { url: 'https://z1.ax1x.com/2023/11/05/piQsIdU.jpg'},
         { url: 'https://z1.ax1x.com/2023/11/05/piQs5ZT.jpg'}
       ],
+      courseInfo: []
     };
   },
   //计算属性
@@ -152,6 +156,23 @@ export default {
     swiper() {
       return this.$refs.mySwiper.$swiper;
     },
+  },
+  created() {
+    this.getCourse()
+  },
+  methods: {
+    getCourse(){
+      const data = {
+        page: 1,
+        pageSize: 32,
+        courseTypeId: '',
+        courseName: ''
+      };
+      axios.post('http://localhost:8081/getCourse', data).then(res => {
+        this.courseInfo = res.data.data.records
+        console.log(this.courseInfo)
+      })
+    }
   }
 
 };

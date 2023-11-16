@@ -21,10 +21,6 @@ export default new Router({
           name: 'login',
           component: () => import('../components/user/login')
         },{
-          path:'course',
-          name:'course',
-          component:()=>import("../components/course/course")
-        },{
           path:'community',
           name:'community',
           component:()=>import("../components/community/index.vue")
@@ -39,11 +35,11 @@ export default new Router({
       component: Layout,
       redirect: '/index',
       children: [
-        // {
-        //   path: 'index',
-        //   name: 'index',
-        //   component: () => import('../components/course/index')
-        // },
+        {
+          path: 'index',
+          name: 'index',
+          component: () => import('../components/course/index')
+        },
         {
           path: 'play',
           name: 'play',
