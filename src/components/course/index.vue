@@ -1,11 +1,42 @@
 <script>
+import axios from "axios";
+
 export default {
   data(){
     return{
       number:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
       value2: 5,
-      colors: ['#99A9BF', '#F7BA2A', '#FF9900'], // 等同于 { 2: '#99A9BF', 4: { value: '#F7BA2A', excluded: true }, 5: '#FF9900' }
+      colors: ['#99A9BF', '#F7BA2A', '#FF9900'],
+      total:0,
+      data:{
+        page: 1,
+        pageSize: 16,
+        courseTypeId: '',
+        courseName: ''
+      },
+      courseInfo: []
     }
+  },
+  methods: {
+    initCourse(){
+      axios.post('http://localhost:8081/getCourse', this.data).then(res => {
+        this.courseInfo = res.data.data.records
+        this.total=res.data.data.total;
+        console.log(this.courseInfo)
+        console.log(this.total)
+      })
+    },
+    currentChange(currentPage) {
+      this.data.page = currentPage;
+      this.initCourse();
+    },
+    sizeChange(currentSize) {
+      this.size = currentSize;
+      this.initCourse();
+    }
+  },
+  mounted() {
+    this.initCourse();
   }
 };
 </script>
@@ -32,34 +63,34 @@ export default {
 
     <div class="recommend">
       <ul>
-        <li v-for="(number,index) in number" :key="number" >
-          <el-card shadow="always">
+        <li v-for="(course,index) in courseInfo" :key="index" >
+          <el-card shadow="always" style="width: 300px;height: 241px;">
             <div class="imgGet">
-              <img src="https://z1.ax1x.com/2023/11/05/piQshLV.jpg">
+              <img :src="course.coverUrl">
               <div>
-                <span style="margin-top: 10px">测试课程{{number}}</span>
+                <span style="margin-top: 10px">{{course.title}}</span>
               </div>
             </div>
             <div style="padding: 14px;">
               <div class="introduction">
-                关于测试课程{{number}}的一段简介，关于测试课程{{number}}的一段简介，关于测试课程{{number}}的一段简介
+                {{course.intro}}
               </div>
             </div>
             <div class="other-container" style="display: grid; grid-template-columns: 1fr auto;">
-              <i class="el-icon-view">1248</i>
-              <el-rate v-model="value2" :colors="colors" disabled></el-rate>
+              <i class="el-icon-view">{{course.userNumber}}</i>
+              <el-rate v-model="course.level" :colors="colors" disabled></el-rate>
             </div>
           </el-card>
         </li>
       </ul>
       <center>
         <el-pagination
-          @size-change="handleSizeChange"
-          @current-change="handleCurrentChange"
-          :current-page.sync="currentPage3"
-          :page-size="100"
+          background
+          @current-change="currentChange"
+          @size-change="sizeChange"
           layout="prev, pager, next, jumper"
-          :total="1000">
+          :page-size="16"
+          :total="total">
         </el-pagination>
       </center>
     </div>
@@ -94,7 +125,7 @@ input {
 }
 button {
   padding: 10px 15px;
-  background-color: #ffc3c3;
+  background-color: #ffffff;
   color: #fff;
   border: none;
   border-radius: 0 5px 5px 0;
@@ -103,7 +134,7 @@ button {
 }
 
 button:hover {
-  background-color: #ff3434;
+  background-color: rgb(68, 173, 238);
 }
 
 ul {
@@ -138,8 +169,8 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #ffc3c3;
-  color: #ff3434;
+  background-color: rgb(29, 162, 227);
+  color: black;
 }
 
 .recommend{

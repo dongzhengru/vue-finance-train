@@ -4,7 +4,7 @@
       <!--每页幻灯片使用swiper-slide标签-->
       <!--幻灯片组件生成的标签自带.swiper-slide的类名，但单类名选择器设置的部分css(如宽高)将被覆盖-->
       <swiper-slide class="swiper_slide_item" v-for="(image, index) in images" :key="index">
-        <img :src="image.url" :alt="image.alt">
+        <img :src="image.photoUrl" :alt="image.alt">
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
       <div class="swiper-button-prev" slot="button-prev"></div>
@@ -36,7 +36,7 @@
     <div class="recommend">
       <ul>
         <li v-for="(course,index) in courseInfo.slice(0, 8)" :key="number" >
-          <el-card shadow="always">
+          <el-card shadow="always" style="width: 300px;height: 241px;">
             <div class="imgGet">
               <img :src="course.coverUrl">
               <div>
@@ -61,7 +61,7 @@
     <div class="recommend">
       <ul>
         <li v-for="(course,index) in courseInfo.slice(8, 16)" :key="number" >
-          <el-card shadow="always">
+          <el-card shadow="always" style="width: 300px;height: 241px;">
             <div class="imgGet">
               <img :src="course.coverUrl">
               <div>
@@ -86,7 +86,7 @@
     <div class="recommend">
       <ul>
         <li v-for="(course,index) in courseInfo.slice(16, 32)" :key="number" >
-          <el-card shadow="always">
+          <el-card shadow="always" style="width: 300px;height: 241px;">
             <div class="imgGet">
               <img :src="course.coverUrl">
               <div>
@@ -100,7 +100,7 @@
             </div>
             <div class="other-container" style="display: grid; grid-template-columns: 1fr auto;">
               <i class="el-icon-view">{{course.userNumber}}</i>
-              <el-rate v-model="course.level" :colors="colors" disabled></el-rate>
+              <el-rate v-model="course.level" :colors="colors" disabled ></el-rate>
             </div>
           </el-card>
         </li>
@@ -144,9 +144,9 @@ export default {
         }
       },
       images: [
-        { url: 'https://z1.ax1x.com/2023/11/05/piQshLV.jpg'},
-        { url: 'https://z1.ax1x.com/2023/11/05/piQsIdU.jpg'},
-        { url: 'https://z1.ax1x.com/2023/11/05/piQs5ZT.jpg'}
+        // { url: 'https://z1.ax1x.com/2023/11/05/piQshLV.jpg'},
+        // { url: 'https://z1.ax1x.com/2023/11/05/piQsIdU.jpg'},
+        // { url: 'https://z1.ax1x.com/2023/11/05/piQs5ZT.jpg'}
       ],
       courseInfo: []
     };
@@ -158,7 +158,8 @@ export default {
     },
   },
   created() {
-    this.getCourse()
+    this.getCourse();
+    this.getPhoto();
   },
   methods: {
     getCourse(){
@@ -171,6 +172,12 @@ export default {
       axios.post('http://localhost:8081/getCourse', data).then(res => {
         this.courseInfo = res.data.data.records
         console.log(this.courseInfo)
+      })
+    },
+    getPhoto(){
+      axios.post('http://localhost:8081/getPhoto').then(res => {
+        this.images = res.data.data
+        console.log(this.images)
       })
     }
   }
