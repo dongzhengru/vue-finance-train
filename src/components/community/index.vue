@@ -1,171 +1,122 @@
+<template>
+  <div style="width: 1000px; margin: 0 auto">
+    <div style="margin: 20px 0">
+      <div style="margin: 10px 0">
+        <el-input type="textarea" placeholder="请输入互动内容" v-model="comment.content"></el-input>
+        <div style="text-align: right; margin: 10px 0" >
+          <el-button type="primary" @click="submit" >提交</el-button>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin: 20px 0">
+      <div style="margin: 10px 0; font-size: 24px; padding: 10px 0; border-bottom: 1px solid #ccc; text-align: left">
+        互动广场
+      </div>
+      <div style="margin: 20px 0; text-align: left">
+        <div style="padding: 10px 0;border-bottom: 1px solid #ccc;"  v-for="item in comments" :key = "item.id">
+          <div style=" display: flex">
+            <div style="width: 80px"><el-avatar :size="50" :src="'https://cube.elemecdn.com/9/c2/f0ee8a3c7c9638a54940382568c9dpng.png'"></el-avatar></div>
+            <div style="flex: 1">
+              <div style="color: black ">  <b>{{ item.username }}：</b><span>{{ item.content }}</span></div>
+
+              <div style="width: 200px;margin-top: 15px">
+                <i class="el-icon-time"></i><span style="margin-left: 5px">{{ item.createTime}}</span>
+              </div>
+              <!--多级回复-->
+              <div>
+                <el-button type="text" @click="reply(item.id, item.username)">回复</el-button>
+              </div>
+
+              <!--回复列表-->
+              <div v-if="item.children.length" style="margin-left: 100px;background-color:aliceblue;padding: 10px;border-radius: 10px">
+                <div v-for="sub in item.children" :key="sub.id">
+                  <div style="padding: 5px 0">
+                    <b style="cursor: pointer" @click="reply(sub.pid,sub.username)">{{ sub.username }}</b>
+                    <span>
+                      回复
+                    <span style="color: cornflowerblue">@{{ sub.target }}</span>
+                    <span style="color: #666; margin-left: 10px">{{ sub.content }}</span>
+                    </span>
+                    <div style="width: 200px;margin-top: 15px">
+                      <i class="el-icon-time"></i><span style="margin-left: 5px">{{ sub.createTime }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <el-dialog title="回复" :visible.sync="dialogFormVisible" width="40%">
+      <el-form :model="replyComment">
+        <el-form-item label="内容" :label-width="100">
+          <el-input v-model="replyComment.content" autocomplete="off" style="width: 80%"></el-input>
+        </el-form-item>
+      </el-form>
+      <div slot="footer" class="dialog-footer">
+        <el-button @click="dialogFormVisible = false">取 消</el-button>
+        <el-button type="primary" @click="saveReply">确 定</el-button>
+      </div>
+    </el-dialog>
+  </div>
+</template>
+
 <script>
+import axios from "axios";
+
 export default {
   data(){
     return{
-      number:[1,2,3,4,5],
-      number2:[1,2,3,4,5],
-      value2: 5,
-      textarea:[],
-      textareaFirst:""
+      value: 0,
+      comments: [],
+      pid: 0,
+      comment: {
+        content: ''
+      },
+      replyComment:{
+
+      },
+      dialogFormVisible:false
+    }
+  },
+  created() {
+    this.load()
+  },
+  methods:{
+    reply(parentId, target){
+      this.replyComment = {parentId: parentId, userId: 3, username:'dzr', foreignId: -1, target: target}
+      console.log(this.replyComment)
+      this.dialogFormVisible = true
+    },
+    load(){
+      axios.get('http://localhost:8081/comment?foreignId=-1').then(res => {
+        this.comments = res.data.data
+      })
+    },
+    saveReply(){
+      axios.post('http://localhost:8081/comment/save', this.replyComment).then(res => {
+        if (res.status === 200){
+          this.$notify.success("评论成功")
+          this.load();
+          this.replyComment = {}
+          this.dialogFormVisible = false
+        }
+      })
+    },
+    submit(){
+      this.comment.userId = 4
+      this.comment.username = 'gsh'
+      this.comment.foreignId = -1
+      axios.post('http://localhost:8081/comment/save', this.comment).then(res => {
+        this.$notify.success("评论成功")
+        this.load();
+        this.comment = {}
+      })
     }
   }
-};
+}
 </script>
-
-<template>
-<div>
-  <div class="body">
-
-    <div class="input">
-      <el-input
-        type="textarea"
-        :rows="8"
-        placeholder="请输入内容"
-        v-model="textareaFirst" style="width: 70%;margin-left: 15%;margin-top: 20px;">
-      </el-input>
-      <center><el-button type="primary" style="height: 50px;width: 100px;margin-top: 10px;margin-bottom: 10px;">发送</el-button></center>
-    </div>
-
-    <el-card  v-for="(number1,index) in number" :key="number1"  class="community" shadow="always">
-      <div class="head">
-        <div class="imageGet"><img src="https://z1.ax1x.com/2023/11/05/piQshLV.jpg"></div>
-        <div class="username">username</div>
-      </div>
-      <div class="between">
-        简单的评测简单的评测简单的评测简单的评测简单的评测简单的评测简单的评测简单的评测简单的评测简单的评测简单的评测简单的评测评测简单的评测简单的评测简单的评测简单的评测简单的评测简单的评测简单的评测简单的评测简单的评测简单的评测简单的评测简单的评测
-      </div>
-      <div class="end">
-        <div></div>
-        <div class="gb">
-          <i class="fa fa-heart" style="font-size: 25px"></i>
-        </div>
-      </div>
-      <div class="comments">
-        <div v-for="(number3,index) in number2" :key="number3">
-          <div class="comment">
-            <div class="imageGet2"><img src="https://z1.ax1x.com/2023/11/05/piQshLV.jpg"></div>
-            <div class="username2">username</div>:
-            <div class="word">
-              简单的评测简单的评测简单的评测简单的评测简单的评测简单的评测简单的评测简单的评测{{number3}}
-            </div>
-          </div>
-          <div class="end2">
-            <div></div>
-            <div class="gb2">
-              <i class="fa fa-heart" style="font-size: 15px"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="endInput">
-        <el-input
-        type="textarea"
-        :rows="3"
-        placeholder="请输入内容"
-        v-model="textarea[number1]">
-      </el-input>
-          <el-button type="primary" style="height: 40px">发送</el-button>
-      </div>
-    </el-card>
-  </div>
-  <center>
-    <el-pagination
-      @size-change="handleSizeChange"
-      @current-change="handleCurrentChange"
-      :current-page.sync="currentPage3"
-      :page-size="100"
-      layout="prev, pager, next, jumper"
-      :total="1000">
-    </el-pagination>
-  </center>
-</div>
-</template>
-
-<style scoped>
-.body{
-  display: flex;
-  flex-direction: column;
-}
-.community{
-  width: 60%;
-  margin-left: 20%;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-}
-.head{
-  display: flex;
-  flex-direction: row;
-}
-.imageGet img{
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-.username{
-  font-size: 30px;
-  line-height: 40px;
-}
-.between{
-  width: 80%;
-  margin-left: 10%;
-}
-.end{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.gb{
-  display: flex;
-  flex-direction: row;
-}
-.gb img{
-  width: 25px;
-  height: 25px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-.comments{
-  display: flex;
-  flex-direction: column;
-}
-.comment{
-  display: flex;
-  flex-direction: row;
-  margin-top: 10px;
-}
-.imageGet2 img{
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-}
-.username2{
-  font-size: 15px;
-  line-height: 20px;
-  color: cornflowerblue;
-}
-
-.end2{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.gb2{
-  display: flex;
-  flex-direction: row;
-}
-.gb2 img{
-  width: 15px;
-  height: 15px;
-  margin-left: 7px;
-  margin-right: 10px;
-}
-.endInput{
-  display: flex;
-  flex-direction: row;
-  margin-top: 20px;
-}
-.input{
-  background-color: darkgray;
-}
-</style>
