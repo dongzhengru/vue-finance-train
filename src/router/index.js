@@ -41,7 +41,7 @@ export default new Router({
           component: () => import('../components/course/index')
         },
         {
-          path: 'play',
+          path: 'play/:courseId',
           name: 'play',
           component: () => import('../components/course/play')
         }]

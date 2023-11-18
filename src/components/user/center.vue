@@ -85,34 +85,34 @@ export default {
         courseName: ''
       },
       courseList: [{
-        coverUrl: 'https://z1.ax1x.com/2023/11/05/piQshLV.jpg',
-        courseName: '测试课程1',
-        courseSummary: '一条简介'
+        coverUrl: 'https://xgfm737.github.io/2023/02/28/hello-world/touzishiwu.png',
+        courseName: '国际税收优惠政策解读',
+        courseSummary: '详细解读国际税收优惠政策，指导企业如何合理利用税收优惠。'
       },{
-        coverUrl: 'https://z1.ax1x.com/2023/11/05/piQshLV.jpg',
-        courseName: '测试课程2',
-        courseSummary: '一条简介'
+        coverUrl: 'https://xgfm737.github.io/2023/02/28/hello-world/chunashiwu.png',
+        courseName: '资本运作税务筹划',
+        courseSummary: '学习如何为资本运作进行税务筹划，降低税收成本。'
       },{
-        coverUrl: 'https://z1.ax1x.com/2023/11/05/piQshLV.jpg',
-        courseName: '测试课程3',
-        courseSummary: '一条简介'
+        coverUrl: 'https://xgfm737.github.io/2023/02/28/hello-world/caiwufenxi.png',
+        courseName: '税务风险防控',
+        courseSummary: '了解税务风险的来源，学习如何进行税务风险防控。'
       }], // 课程列表数据
       currentPage: 1, // 当前页码
       pageSize: 10, // 每页显示的条目数
-      totalCourses: 0, // 总课程数
+      totalCourses: 3, // 总课程数
       playRecords: [{
-        coverUrl: 'https://z1.ax1x.com/2023/11/05/piQshLV.jpg',
-        title: '测试课程1',
+        coverUrl: 'https://xgfm737.github.io/2023/02/28/hello-world/touzishiwu.png',
+        title: '国际税收合规',
         watchDuration: '02:04:23',
         watchTime: '2023年11月8日 13:27'
       },{
-        coverUrl: 'https://z1.ax1x.com/2023/11/05/piQshLV.jpg',
-        title: '测试课程2',
+        coverUrl: 'https://xgfm737.github.io/2023/02/28/hello-world/zaiquanshiwu.png',
+        title: '资本运作税收争议解决',
         watchDuration: '01:16:20',
         watchTime: '2023年11月8日 13:21'
       },{
-        coverUrl: 'https://z1.ax1x.com/2023/11/05/piQshLV.jpg',
-        title: '测试课程3',
+        coverUrl: 'https://xgfm737.github.io/2023/02/28/hello-world/zaiquanshiwu.png',
+        title: '个人所得税优惠政策解读',
         watchDuration: '00:26:12',
         watchTime: '2023年11月8日 08:45'
       }],
@@ -122,7 +122,28 @@ export default {
         email: "dzr@example.com",
         // 其他个人资料字段
       },
-      courseData: [
+      option: {
+        title: {
+          text: '近7天课程观看人数统计',
+        },
+        xAxis: {
+          type: 'category',
+          data: '',
+        },
+        yAxis: {
+          type: 'value',
+        },
+        series: [
+          {
+            data: '',
+            type: 'line',
+            smooth: true, // 使折线平滑
+            areaStyle: {}, // 可以添加区域填充
+            itemStyle: { color: '#1da2e3' }, // 修改折线颜色
+          },
+        ],
+      },
+      courseData1: [
         { date: '2023-11-06', views: 92 },
         { date: '2023-11-07', views: 75 },
         { date: '2023-11-08', views: 60 },
@@ -130,6 +151,33 @@ export default {
         { date: '2023-11-10', views: 50 },
         { date: '2023-11-11', views: 65 },
         { date: '2023-11-12', views: 78 },
+      ],
+      courseData2: [
+        { date: '2023-11-06', views: 1244 },
+        { date: '2023-11-07', views: 843 },
+        { date: '2023-11-08', views: 1043 },
+        { date: '2023-11-09', views: 1340 },
+        { date: '2023-11-10', views: 916 },
+        { date: '2023-11-11', views: 1215 },
+        { date: '2023-11-12', views: 1046 },
+      ],
+      courseData3: [
+        { date: '2023-11-06', views: 1254 },
+        { date: '2023-11-07', views: 1357 },
+        { date: '2023-11-08', views: 1253 },
+        { date: '2023-11-09', views: 1757 },
+        { date: '2023-11-10', views: 1252 },
+        { date: '2023-11-11', views: 1157 },
+        { date: '2023-11-12', views: 1059 },
+      ],
+      courseData4: [
+        { date: '2023-11-06', views: 5 },
+        { date: '2023-11-07', views: 3 },
+        { date: '2023-11-08', views: 1 },
+        { date: '2023-11-09', views: 8 },
+        { date: '2023-11-10', views: 2 },
+        { date: '2023-11-11', views: 3 },
+        { date: '2023-11-12', views: 1 },
       ],
     };
   },
@@ -169,38 +217,41 @@ export default {
       const myChart4 = echarts.init(echartsContainer4);
 
       // 获取最近7天的日期和观看人数数据
-      const recentDays = this.courseData.slice(-7);
-      const dates = recentDays.map(day => day.date);
-      const views = recentDays.map(day => day.views);
+      const recentDays1 = this.courseData1.slice(-7);
+      const recentDays2 = this.courseData2.slice(-7);
+      const recentDays3 = this.courseData3.slice(-7);
+      const recentDays4 = this.courseData4.slice(-7);
+      const dates1 = recentDays1.map(day => day.date);
+      const dates2 = recentDays2.map(day => day.date);
+      const dates3 = recentDays3.map(day => day.date);
+      const dates4 = recentDays4.map(day => day.date);
+      const views1 = recentDays1.map(day => day.views);
+      const views2 = recentDays2.map(day => day.views);
+      const views3 = recentDays3.map(day => day.views);
+      const views4 = recentDays4.map(day => day.views);
 
       // ECharts 配置
-      const option = {
-        title: {
-          text: '近7天课程观看人数统计',
-        },
-        xAxis: {
-          type: 'category',
-          data: dates,
-        },
-        yAxis: {
-          type: 'value',
-        },
-        series: [
-          {
-            data: views,
-            type: 'line',
-            smooth: true, // 使折线平滑
-            areaStyle: {}, // 可以添加区域填充
-            itemStyle: { color: '#1da2e3' }, // 修改折线颜色
-          },
-        ],
-      };
+
 
       // 使用配置项显示图表
-      myChart1.setOption(option);
-      myChart2.setOption(option);
-      myChart3.setOption(option);
-      myChart4.setOption(option);
+      this.option.title.text = '近7天课程观看人数统计'
+      this.option.xAxis.data = dates1
+      this.option.series[0].data = views1
+      myChart1.setOption(this.option);
+      this.option.title.text = '近7天课程观看时长统计'
+      this.option.xAxis.data = dates2
+      this.option.series[0].data = views2
+      this.option.series[0].itemStyle.color = '#123042'
+      myChart2.setOption(this.option);
+      this.option.title.text = '近7天互动人数统计'
+      this.option.xAxis.data = dates3
+      this.option.series[0].data = views3
+      myChart3.setOption(this.option);
+      this.option.title.text = '近7天课程更新次数统计'
+      this.option.xAxis.data = dates4
+      this.option.series[0].data = views4
+      this.option.series[0].itemStyle.color = '#1da2e3'
+      myChart4.setOption(this.option);
     }
   },
 };

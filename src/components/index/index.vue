@@ -35,7 +35,7 @@
       <div class="choose"><center>税务管理与筹划</center></div>
     <div class="recommend">
       <ul>
-        <li v-for="(course,index) in courseInfo.slice(0, 8)" :key="number" >
+        <li v-for="(course,index) in courseInfo.slice(0, 8)" :key="number" @click="goToCourse(course.id)">
           <el-card shadow="always" style="width: 300px;height: 241px;">
             <div class="imgGet">
               <img :src="course.coverUrl">
@@ -60,7 +60,7 @@
     <div class="choose"><center>国际税务筹划与管理</center></div>
     <div class="recommend">
       <ul>
-        <li v-for="(course,index) in courseInfo.slice(8, 16)" :key="number" >
+        <li v-for="(course,index) in courseInfo.slice(8, 16)" :key="number" @click="goToCourse(course.id)">
           <el-card shadow="always" style="width: 300px;height: 241px;">
             <div class="imgGet">
               <img :src="course.coverUrl">
@@ -179,6 +179,9 @@ export default {
         this.images = res.data.data
         console.log(this.images)
       })
+    },
+    goToCourse(courseId){
+      this.$router.push({ name: 'play', params: { courseId } })
     }
   }
 

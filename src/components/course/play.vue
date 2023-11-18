@@ -13,7 +13,7 @@
         <div style="display: flex; align-items: center;">
 
 
-          
+
           <h3 style="margin-right: 10px;">评分</h3>
           <el-rate v-model="rating" :max="5" allow-half></el-rate>
         </div>
@@ -60,37 +60,11 @@ import course from "./index.vue";
 export default {
   data() {
     return {
-      courseId:2,
+      courseId: 2,
       rating: 0,
       id:1,
       course2:[],
-      courseInfo: [
-        // {
-        //   title: '课程1',
-        //   cover: 'https://z1.ax1x.com/2023/11/05/piQshLV.jpg',
-        //   intro: '这是课程1的简介。',
-        // },
-        // {
-        //   title: '课程2',
-        //   cover: 'https://z1.ax1x.com/2023/11/05/piQshLV.jpg',
-        //   intro: '这是课程2的简介。',
-        // },
-        // {
-        //   title: '课程3',
-        //   cover: 'https://z1.ax1x.com/2023/11/05/piQshLV.jpg',
-        //   intro: '这是课程3的简介。',
-        // },
-        // {
-        //   title: '课程4',
-        //   cover: 'https://z1.ax1x.com/2023/11/05/piQshLV.jpg',
-        //   intro: '这是课程4的简介。',
-        // },
-        // {
-        //   title: '课程5',
-        //   cover: 'https://z1.ax1x.com/2023/11/05/piQshLV.jpg',
-        //   intro: '这是课程5的简介。',
-        // }
-      ],
+      courseInfo: [],
     };
   },
   methods:{
@@ -112,6 +86,7 @@ export default {
     },
   },
   mounted() {
+    this.courseId = this.$route.params.courseId
     this.initCourse();
   }
 };

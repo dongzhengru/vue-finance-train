@@ -14,7 +14,7 @@
           </el-menu>
         </div>
         <div class="login-register">
-          <a href="#" style="margin-right: 25px;">登录/注册</a>
+          <a href="/#/login" style="margin-right: 25px;">登录/注册</a>
         </div>
       </el-header>
       <el-main class="el-main">
@@ -60,7 +60,20 @@
 <script>
 
 export default {
-  name: 'Layout'
+  name: 'Layout',
+  methods: {
+    handleSelect(key, keyPath){
+      if (key === '1') {
+        this.$router.push('/')
+      } else if (key === '2') {
+        this.$router.push('/course/index')
+      } else if (key === '3') {
+        this.$router.push('/community')
+      } else if (key === '4') {
+        this.$router.push('/center')
+      }
+    }
+  }
 }
 </script>
 

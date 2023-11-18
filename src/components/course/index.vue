@@ -33,6 +33,9 @@ export default {
     sizeChange(currentSize) {
       this.size = currentSize;
       this.initCourse();
+    },
+    goToCourse(courseId){
+      this.$router.push({ name: 'play', params: { courseId } })
     }
   },
   mounted() {
@@ -43,27 +46,21 @@ export default {
 
 <template>
   <div>
-
-
-
     <nav>
       <ul>
-        <li><a href="#">全部</a></li>
-        <li><a href="#">财务方向</a></li>
-        <li><a href="#">税务方向</a></li>
-        <li><a href="#">财税方向</a></li>
+        <li><a>全部</a></li>
+        <li><a>财务方向</a></li>
+        <li><a>税务方向</a></li>
+        <li><a>财税方向</a></li>
         <div class="search-container">
           <input type="text" placeholder="搜索...">
           <button type="submit"><img src="../../assets/搜索.png"/></button>
         </div>
       </ul>
     </nav>
-
-
-
     <div class="recommend">
       <ul>
-        <li v-for="(course,index) in courseInfo" :key="index" >
+        <li v-for="(course,index) in courseInfo" :key="index" @click="goToCourse(course.id)">
           <el-card shadow="always" style="width: 300px;height: 241px;">
             <div class="imgGet">
               <img :src="course.coverUrl">
@@ -94,9 +91,7 @@ export default {
         </el-pagination>
       </center>
     </div>
-
   </div>
-
 </template>
 
 <style scoped>
